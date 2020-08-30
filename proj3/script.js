@@ -51,5 +51,14 @@ const sort = () => {
   courses.sort((a, b) => a.price - b.price);
   getElementList();
 };
+const sortButton = document.querySelector(".sort-btn");
 
-window.addEventListener("click", sort);
+sortButton.addEventListener("click", sort);
+
+const revSort = () => {
+  courses.sort((a, b) => b.price - a.price);
+  getElementList();
+};
+
+const revSortBtn = document.querySelector(".rev-btn");
+revSortBtn.addEventListener("click", revSort);
